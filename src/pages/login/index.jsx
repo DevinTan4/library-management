@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { banner2Img, banner3Img, bannerImg } from "../../assets/images";
 import { IoEyeOutline } from "react-icons/io5";
 import { SlLock } from "react-icons/sl";
+import HomePage from "../home";
 
 const LoginPage = () => {
   return (
@@ -13,7 +14,7 @@ const LoginPage = () => {
       </div>
 
       {/* Right side */}
-      <div className="w-1/2 bg-[#003161] pt-[98px] px-[63px] pb-[66px] h-screen">
+      <div className="w-1/2 bg-[#003161] pt-[79px] px-[63px] pb-[66px] h-screen">
         {/* Header */}
         <header className="mb-[61px]">
           <h2 className="text-[40px] font-bold leading-[48.41px]">
@@ -73,7 +74,7 @@ const LoginPage = () => {
             </div>
           </div>
           {/* Login button */}
-          <div className="flex justify-center mb-[126px]">
+          <div className="flex justify-center mb-[83px]">
             <Link to="/">
               <button className="w-[190px] h-[43px] border border-white rounded-3xl font-semibold text-xl cursor-pointer hover:bg-[#E95B0A] hover:border-none active:bg-white active:text-[#E95B0A] hover:transition hover:duration-[400ms] active:transition-none">
                 Log in
@@ -81,6 +82,15 @@ const LoginPage = () => {
             </Link>
           </div>
         </form>
+        {/* Footer */}
+        <footer>
+          <div className="text-center font-light">
+            Tidak memiliki akun?{" "}
+            <span className="font-bold">
+              <Link to="/register">Sign Up</Link>
+            </span>
+          </div>
+        </footer>
       </div>
     </div>
   );
