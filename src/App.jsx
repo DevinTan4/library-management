@@ -7,6 +7,7 @@ const App = () => {
     <Fragment>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<>HomePage</>} />
       </Routes>
     </Fragment>
   );
