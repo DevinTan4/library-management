@@ -1,7 +1,7 @@
-const Title = ({ children }) => {
+const Title = ({ children, classname }) => {
   return (
     <div>
-      <p className="text-[40px] font-normal font-dmSerif text-[#26486D] leading-[54.84px] cursor-default">
+      <p className="text-xl font-dmSerif text-[#26486D] cursor-default">
         {children}
       </p>
     </div>

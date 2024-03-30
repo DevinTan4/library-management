@@ -10,7 +10,20 @@ const HomePage = () => {
       <Main />
       {/* Footer */}
       <footer>
-        <div className="h-[376px] bg-[#003060]"></div>
+        <div className="h-[372px] bg-[#003060] p-[60px]">
+          <div className="bg-slate-600">
+            {/* Left section */}
+            <div>
+              <h2 className="font-bold text-white text-2xl">
+                YAYASAN TARAKANITA
+              </h2>
+            </div>
+            {/* Middle section */}
+            <div></div>
+            {/* Right section */}
+            <div></div>
+          </div>
+        </div>
       </footer>
     </div>
   );

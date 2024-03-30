@@ -3,6 +3,7 @@ import { schoolLogoImg } from "../../../../assets/images";
 import Logo from "./_components/Logo";
 import Title from "./_components/Title";
 import Button from "./_components/Button";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -14,13 +15,23 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <div className="h-[75px] bg-[#F6EEE1] w-full px-[60px] flex justify-center items-center space-x-[465px]">
+        <div className="h-[47px] bg-[#F6EEE1] w-full px-4 flex justify-between items-center">
           {/* Left side (logo) */}
-          <Logo src={schoolLogoImg} />
+          <div>
+            <Logo src={schoolLogoImg} classname="w-[21px] h-[29px]" />
+          </div>
+
           {/* Middle (title) */}
-          <Title>LIBRARY</Title>
+          <div>
+            <Title>LIBRARY</Title>
+          </div>
+
           {/* Right side (login button) */}
-          <Button onClick={handleLogin} />
+          <div>
+            <Button onClick={handleLogin}>
+              <RxHamburgerMenu className="size-5" />
+            </Button>
+          </div>
         </div>
       </nav>
     </header>
