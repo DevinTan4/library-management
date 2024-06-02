@@ -52,8 +52,10 @@ const LoginV2 = () => {
       {/* Login Form */}
       <div className="bg-[#003161] w-full h-[422px] px-[30px] py-10 text-white lg:h-[683px] lg:px-[171px] lg:py-16 flex flex-col lg:gap-[50px] xl:w-1/2 xl:h-full xl:py-[200px] xl:justify-center">
         {/* Title */}
-        <div className="mb-10 lg:flex lg:flex-col lg:gap-7">
-          <h1 className="font-bold text-3xl lg:text-[64px]">Welcome Back!</h1>
+        <div className="mb-10 lg:flex lg:flex-col lg:gap-7 xl:gap-2 2xl:gap-4">
+          <h1 className="font-bold text-3xl lg:text-[64px] xl:text-5xl 2xl:text-[64px]">
+            Welcome Back!
+          </h1>
           <p className="font-light text-[15px] lg:text-xl">
             Lorem ipsum dolor sit amet.
           </p>
