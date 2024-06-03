@@ -4,9 +4,9 @@ import { bannerMobileImg } from "../../assets/images";
 
 const LoginPage = () => {
   return (
-    <div className="w-full h-full lg:h-[1366px]">
+    <div className="w-full h-full lg:h-[1366px] desktop:w-[1920px] desktop:h-[993px] desktop:flex">
       {/* Banner */}
-      <div className="w-full h-1/2">
+      <div className="w-full h-1/2 desktop:w-1/2 desktop:h-full">
         <img
           src={bannerMobileImg}
           alt="bannerImg"
@@ -15,7 +15,7 @@ const LoginPage = () => {
       </div>
 
       {/* Form */}
-      <div className="text-white font-inter h-1/2 w-full bg-blue px-[39px] py-[56px] flex flex-col gap-[14px] lg:px-[171px] lg:gap-[90px] lg:justify-center">
+      <div className="text-white font-inter h-1/2 w-full bg-blue px-[39px] py-[56px] flex flex-col gap-[14px] lg:px-[171px] lg:gap-[90px] lg:justify-center desktop:w-1/2 desktop:h-full">
         {/* Title */}
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl font-bold lg:text-[64px]">Welcome Back</h1>
@@ -62,7 +62,7 @@ const LoginPage = () => {
               <p className="font-light text-[13px] text-text-blue lg:text-[18px]">
                 Forgot Password?
               </p>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <input type="checkbox" className="lg:size-[19px]" />
                 <label
                   htmlFor=""

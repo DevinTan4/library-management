@@ -12,6 +12,9 @@ export default {
         "text-blue": "#22608E",
         orange: "#E95B0A",
       },
+      screens: {
+        desktop: "1920px",
+      },
     },
   },
   plugins: [],
