@@ -6,7 +6,16 @@ export default {
       inter: ["Inter"],
       dmSerif: ["DM Serif Display"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        blue: "#003161",
+        "text-blue": "#22608E",
+        orange: "#E95B0A",
+      },
+      screens: {
+        desktop: "1920px",
+      },
+    },
   },
   plugins: [],
 };

@@ -3,5 +3,13 @@ import schoolLogoImg from "./schoolLogoImg.png";
 import homeImg from "./homeImg.png";
 import banner2Img from "./banner2Img.png";
 import banner3Img from "./banner3Img.png";
+import bannerMobileImg from "./bannerMobileImg.png";
 
-export { bannerImg, schoolLogoImg, homeImg, banner2Img, banner3Img };
+export {
+  bannerImg,
+  schoolLogoImg,
+  homeImg,
+  banner2Img,
+  banner3Img,
+  bannerMobileImg,
+};
