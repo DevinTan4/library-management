@@ -8,6 +8,12 @@ import instagramIcon from "./instagramIcon.png";
 import youtubeIcon from "./youtubeIcon.png";
 import twitterIcon from "./twitterIcon.png";
 import facebookIcon from "./facebookIcon.png";
+import hamburgerMenuBlueIcon from "./hamburgerMenuBlueIcon.png";
+import profileBlueIcon from "./profileBlueIcon.png";
+import bookIcon from "./bookIcon.png";
+import borrowedBookIcon from "./borrowedBookIcon.png";
+import searchBlackIcon from "./searchBlackIcon.png";
+import rightArrowIcon from "./rightArrowIcon.png";
 
 export {
   emailIcon,
@@ -20,4 +26,10 @@ export {
   facebookIcon,
   instagramIcon,
   youtubeIcon,
+  hamburgerMenuBlueIcon,
+  profileBlueIcon,
+  bookIcon,
+  borrowedBookIcon,
+  searchBlackIcon,
+  rightArrowIcon,
 };
