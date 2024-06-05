@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { emailIcon, passwordIcon, visibleIcon } from "../../assets/icons";
 import { bannerMobileImg } from "../../assets/images";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+
+  // Handle login
+  const handleLogin = () => {
+    navigate("/");
+  };
+
   return (
     <div className="w-full h-full lg:h-[1366px] desktop:w-[1920px] desktop:h-[993px] desktop:flex">
       {/* Banner */}
@@ -75,11 +82,12 @@ const LoginPage = () => {
 
             {/* Login button */}
             <div className="flex justify-center w-full mt-[42px] lg:mt-[59px]">
-              <Link to="/">
-                <button className="bg-transparent border w-[134px] h-[37px] rounded-2xl font-semibold hover:bg-orange hover:border-none duration-500 lg:text-2xl lg:w-[200px] lg:h-[60px] lg:rounded-full">
-                  Log in
-                </button>
-              </Link>
+              <button
+                className="bg-transparent border w-[134px] h-[37px] rounded-2xl font-semibold hover:bg-orange hover:border-none duration-500 lg:text-2xl lg:w-[200px] lg:h-[60px] lg:rounded-full"
+                onClick={handleLogin}
+              >
+                Log in
+              </button>
             </div>
           </form>
         </div>

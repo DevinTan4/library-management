@@ -11,6 +11,7 @@ export default {
         blue: "#003161",
         "text-blue": "#22608E",
         orange: "#E95B0A",
+        cream: "#F6EEE1",
       },
       screens: {
         desktop: "1920px",
