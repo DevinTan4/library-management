@@ -5,6 +5,7 @@ export default {
     fontFamily: {
       inter: ["Inter"],
       dmSerif: ["DM Serif Display"],
+      dmSans: ["DM Sans"],
     },
     extend: {
       colors: {
@@ -12,6 +13,7 @@ export default {
         "text-blue": "#22608E",
         orange: "#E95B0A",
         cream: "#F6EEE1",
+        "pastel-orange": "#E99944",
       },
       screens: {
         desktop: "1920px",
