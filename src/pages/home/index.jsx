@@ -8,14 +8,31 @@ import {
   twitterIcon,
   youtubeIcon,
 } from "../../assets/icons";
-import { homeImg, schoolLogoImg } from "../../assets/images";
+import { schoolLogoImg } from "../../assets/images";
+import { useEffect, useState } from "react";
+import images from "../../data/images";
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Handle logout
   const handleLogout = () => {
     navigate("/login");
+  };
+
+  // Automatic image slider
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  // Image slider dots
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
   };
 
   return (
@@ -53,11 +70,34 @@ const HomePage = () => {
       {/* Main */}
       <main>
         {/* Home banner */}
-        <img
-          src={homeImg}
-          alt="Home Image"
-          className="h-[559px] object-cover object-center w-full lg:h-[1000px] desktop:h-[771px]"
-        />
+        <div className="relative w-full h-[559px] lg:h-[1000px] desktop:h-[771px] overflow-hidden">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-full transition-opacity duration-1000 ${
+                index === currentIndex ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <img
+                src={image}
+                alt={`Slide ${index}`}
+                className="object-cover object-center w-full h-full"
+              />
+            </div>
+          ))}
+          {/* Image slider dots */}
+          <div className="absolute flex space-x-2 transform -translate-x-1/2 bottom-4 left-1/2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full ${
+                  index === currentIndex ? "bg-orange" : "bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
         {/* Search area */}
         <div className="h-[122px] p-[41px] flex flex-col justify-center items-center lg:h-48 desktop:h-[147px]">
           <div className="flex items-center w-full h-full gap-3 bg-white rounded-full p-[5px] pl-5 lg:w-[612px] lg:h-[65px] lg:pl-[45px] lg:justify-between desktop:w-[743px]">
