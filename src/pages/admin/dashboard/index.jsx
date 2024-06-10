@@ -5,9 +5,10 @@ import {
   profileBlueIcon,
   rightArrowIcon,
   searchBlackIcon,
+  upAndDownArrowIcon,
 } from "../../../assets/icons";
 
-const AdminHomePage = () => {
+const AdminDashboardPage = () => {
   return (
     <div className="w-full h-full bg-cream font-dmSans">
       {/* Header */}
@@ -34,7 +35,7 @@ const AdminHomePage = () => {
 
       {/* Main */}
       <main className="py-6 pt-[72px]">
-        <div className="w-full h-full px-[15px] flex flex-col gap-[15px] text-white">
+        <div className="w-full h-full flex flex-col gap-[15px] text-white px-[15px]">
           {/* Total buku tersedia */}
           <div className="flex">
             <div className="size-[114px] bg-blue flex justify-center items-center">
@@ -84,11 +85,43 @@ const AdminHomePage = () => {
             <div className="text-black mt-[15px]">
               <table className="w-full">
                 <thead>
-                  <tr>
-                    <th className="bg-slate-200">No</th>
-                    <th className="bg-slate-200">Judul Buku</th>
-                    <th className="bg-slate-200">Peminjam</th>
-                    <th className="bg-slate-200">Status</th>
+                  <tr className="text-xs font-medium">
+                    <th className="bg-slate-200">
+                      <div className="flex px-[10px] py-3 justify-between items-center">
+                        <span>No</span>
+                        <img
+                          src={upAndDownArrowIcon}
+                          alt="upAndDownArrowIcon"
+                        />
+                      </div>
+                    </th>
+                    <th className="bg-slate-200">
+                      <div className="flex px-[10px] py-3 justify-between items-center">
+                        <span>Judul Buku</span>
+                        <img
+                          src={upAndDownArrowIcon}
+                          alt="upAndDownArrowIcon"
+                        />
+                      </div>
+                    </th>
+                    <th className="bg-slate-200">
+                      <div className="flex px-[10px] py-3 justify-between items-center">
+                        <span>Peminjam</span>
+                        <img
+                          src={upAndDownArrowIcon}
+                          alt="upAndDownArrowIcon"
+                        />
+                      </div>
+                    </th>
+                    <th className="bg-slate-200">
+                      <div className="flex px-[10px] py-3 justify-between items-center">
+                        <span>Status</span>
+                        <img
+                          src={upAndDownArrowIcon}
+                          alt="upAndDownArrowIcon"
+                        />
+                      </div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-xs">
@@ -137,7 +170,7 @@ const AdminHomePage = () => {
           </div>
 
           {/* Detail peminjam */}
-          <div className="px-[21px] py-[15px] bg-white w-full h-full mb-96 text-black flex flex-col gap-[26px]">
+          <div className="px-[21px] py-[15px] bg-white w-full h-full text-black flex flex-col gap-[26px]">
             <h1 className="text-blue font-bold text-[25px]">Detail Peminjam</h1>
             {/* Peminjam */}
             <div className="flex items-center justify-between">
@@ -188,4 +221,4 @@ const AdminHomePage = () => {
   );
 };
 
-export default AdminHomePage;
+export default AdminDashboardPage;
