@@ -14,6 +14,7 @@ import bookIcon from "./bookIcon.png";
 import borrowedBookIcon from "./borrowedBookIcon.png";
 import searchBlackIcon from "./searchBlackIcon.png";
 import rightArrowIcon from "./rightArrowIcon.png";
+import upAndDownArrowIcon from "./upAndDownArrowIcon.png";
 
 export {
   emailIcon,
@@ -32,4 +33,5 @@ export {
   borrowedBookIcon,
   searchBlackIcon,
   rightArrowIcon,
+  upAndDownArrowIcon,
 };
