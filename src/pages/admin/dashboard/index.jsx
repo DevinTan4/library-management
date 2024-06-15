@@ -1,40 +1,118 @@
+import { useState } from "react";
 import {
+  book2Icon,
   bookIcon,
   borrowedBookIcon,
+  closeSidebarIcon,
   hamburgerMenuBlueIcon,
+  homeIcon,
+  logPaperIcon,
+  logoutIcon,
+  logoutWhiteIcon,
   profileBlueIcon,
   rightArrowIcon,
   searchBlackIcon,
   upAndDownArrowIcon,
 } from "../../../assets/icons";
+import { schoolLogoImg } from "../../../assets/images";
+import { useLocation } from "react-router-dom";
 
 const AdminDashboardPage = () => {
+  const [isActive, setIsActive] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const location = useLocation();
+
   return (
-    <div className="w-full h-full bg-cream font-dmSans">
-      {/* Header */}
-      <header>
-        {/* Navbar */}
-        <nav>
-          <div className="flex items-center justify-between w-full h-12 bg-white px-[15px] py-[17px] fixed">
-            <img
-              src={hamburgerMenuBlueIcon}
-              alt="Hamburger Menu"
-              className="w-[17px] h-[14px] cursor-pointer"
-            />
-            <h1 className="text-xl cursor-pointer text-blue font-dmSerif">
-              LIBRARY
-            </h1>
-            <img
-              src={profileBlueIcon}
-              alt="Profile Icon"
-              className="cursor-pointer size-5"
-            />
+    <div className="w-full min-h-screen bg-cream font-dmSans">
+      {/* Sidebar */}
+      <aside
+        className={`fixed top-0 left-0 flex flex-col items-center justify-between min-h-screen py-6 overflow-hidden bg-blue transition-all duration-300 z-20 ${
+          isSidebarOpen ? `w-[200px]` : `w-0`
+        }`}
+      >
+        {/* Close button */}
+        <img
+          src={closeSidebarIcon}
+          alt="Close Sidebar Icon"
+          className="absolute top-4 right-4 size-[10px]"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+        {/* School logo */}
+        <div className="bg-white size-[45px] rounded-full flex justify-center items-center cursor-pointer">
+          <img
+            src={schoolLogoImg}
+            alt="Tarakanita Logo"
+            className="w-7 h-[42px]"
+          />
+        </div>
+        {/* Sidebar menu */}
+        <div className="font-medium text-orange text-[15px] w-full flex flex-col gap-5">
+          {/* Sidebar menu - Home */}
+          <div
+            className={`flex gap-5 items-center hover:bg-blue-hover cursor-pointer border-l-[10px] border-transparent px-[15px] py-5 active:border-orange active:bg-white transition duration-100 ${
+              location.pathname === `/admin-dashboard`
+                ? `bg-white border-l-[10px] border-orange`
+                : ``
+            }`}
+          >
+            <img src={homeIcon} alt="Home Icon" className="size-5" />
+            <span>Home</span>
           </div>
-        </nav>
-      </header>
+          {/* Sidebar menu - Buku*/}
+          <div className="flex gap-5 items-center hover:bg-blue-hover cursor-pointer border-l-[10px] border-transparent px-[15px] py-5 active:border-orange active:bg-white transition duration-100">
+            <img src={book2Icon} alt="Book Icon" className="size-5" />
+            <span>Buku</span>
+          </div>
+          {/* Sidebar menu - Log penyimpanan */}
+          <div className="flex gap-5 items-center hover:bg-blue-hover cursor-pointer border-l-[10px] border-transparent px-[15px] py-5 active:border-orange active:bg-white transition duration-100">
+            <img
+              src={logPaperIcon}
+              alt="Log Peminjaman Icon"
+              className="size-5"
+            />
+            <span>Log Peminjaman</span>
+          </div>
+        </div>
+        {/* Logout button */}
+        <div
+          className="w-[127px] h-10 bg-white rounded-full flex justify-center items-center gap-2 text-orange font-dmSans font-medium text-[15px] hover:opacity-75 transition-all duration-100 active:bg-orange active:text-white cursor-pointer"
+          onMouseDown={() => setIsActive(true)}
+          onMouseUp={() => setIsActive(false)}
+        >
+          <img
+            src={isActive ? logoutWhiteIcon : logoutIcon}
+            alt="Logout Icon"
+            className="size-[22px]"
+          />
+          <span>Logout</span>
+        </div>
+      </aside>
+
+      {/* Navbar */}
+      <nav className={`h-12 bg-white fixed top-0 justify-between w-full z-10`}>
+        <div className="flex items-center justify-between h-full px-[15px]  w-full">
+          {/* Hamburger menu */}
+          <img
+            src={hamburgerMenuBlueIcon}
+            alt="Hamburger Menu Icon"
+            className="cursor-pointer size-5"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          />
+          {/* Title */}
+          <h1 className="text-xl cursor-pointer text-blue font-dmSerif">
+            LIBRARY
+          </h1>
+          {/* Account profile */}
+          <img
+            src={profileBlueIcon}
+            alt="Profile Icon"
+            className="cursor-pointer size-5"
+          />
+        </div>
+      </nav>
 
       {/* Main */}
-      <main className="py-6 pt-[72px]">
+      <main className="py-6 pt-[72px] desktop:pl-[347px]">
         <div className="w-full h-full flex flex-col gap-[15px] text-white px-[15px]">
           {/* Total buku tersedia */}
           <div className="flex">
@@ -216,6 +294,7 @@ const AdminDashboardPage = () => {
             </div>
           </div>
         </div>
+              
       </main>
     </div>
   );

@@ -11,6 +11,7 @@ export default {
       colors: {
         blue: "#003161",
         "text-blue": "#22608E",
+        "blue-hover": "#0F4478",
         orange: "#E95B0A",
         cream: "#F6EEE1",
         "pastel-orange": "#E99944",

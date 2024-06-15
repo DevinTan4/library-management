@@ -15,6 +15,12 @@ import borrowedBookIcon from "./borrowedBookIcon.png";
 import searchBlackIcon from "./searchBlackIcon.png";
 import rightArrowIcon from "./rightArrowIcon.png";
 import upAndDownArrowIcon from "./upAndDownArrowIcon.png";
+import homeIcon from "./homeIcon.png";
+import book2Icon from "./book2Icon.png";
+import logPaperIcon from "./logPaperIcon.png";
+import logoutIcon from "./logoutIcon.png";
+import logoutWhiteIcon from "./logoutWhiteIcon.png";
+import closeSidebarIcon from "./closeSidebarIcon.png";
 
 export {
   emailIcon,
@@ -34,4 +40,10 @@ export {
   searchBlackIcon,
   rightArrowIcon,
   upAndDownArrowIcon,
+  homeIcon,
+  book2Icon,
+  logPaperIcon,
+  logoutIcon,
+  logoutWhiteIcon,
+  closeSidebarIcon,
 };
