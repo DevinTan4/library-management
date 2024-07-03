@@ -10,6 +10,27 @@ import Logo from "../../_atoms/Logo";
 import LogoutButton from "../../_molecules/LogoutButton";
 import SidebarMenu from "../../_molecules/SidebarMenu";
 
+const menuItems = [
+  {
+    path: "/admin-dashboard",
+    src: homeIcon,
+    alt: "Home Icon",
+    label: "Home",
+  },
+  {
+    path: "/admin-buku",
+    src: book2Icon,
+    alt: "Book Icon",
+    label: "Buku",
+  },
+  {
+    path: "/admin-log-peminjaman",
+    src: logPaperIcon,
+    alt: "Log Peminjaman Icon",
+    label: "Log Peminjaman",
+  },
+];
+
 const Sidebar = ({
   isSidebarOpen,
   setIsSidebarOpen,
@@ -37,37 +58,17 @@ const Sidebar = ({
 
       {/* Sidebar menu */}
       <div className="font-medium font-dmSans text-orange text-[15px] w-full flex flex-col gap-5 lg:gap-[33px]">
-        {/* Sidebar menu - Home */}
-        <SidebarMenu
-          isSidebarOpen={isSidebarOpen}
-          src={homeIcon}
-          alt="Home Icon"
-          className={`
-            ${
-              location.pathname === "/admin-dashboard"
-                ? "border-l-[10px] border-orange bg-white pl-[15px]"
-                : ""
-            }
-            ${isSidebarOpen ? "lg:pl-10" : ""}`}
-        >
-          Home
-        </SidebarMenu>
-        {/* Sidebar menu - Buku*/}
-        <SidebarMenu
-          isSidebarOpen={isSidebarOpen}
-          src={book2Icon}
-          alt="Book Icon"
-        >
-          Buku
-        </SidebarMenu>
-        {/* Sidebar menu - Log penyimpanan */}
-        <SidebarMenu
-          isSidebarOpen={isSidebarOpen}
-          src={logPaperIcon}
-          alt="Log Peminjaman Icon"
-        >
-          Log Peminjaman
-        </SidebarMenu>
+        {menuItems.map((item) => (
+          <SidebarMenu
+            key={item.path}
+            isSidebarOpen={isSidebarOpen}
+            path={item.path}
+            src={item.src}
+            alt={item.alt}
+          >
+            {item.label}
+          </SidebarMenu>
+        ))}
       </div>
       {/* Logout button */}
       <LogoutButton

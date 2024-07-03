@@ -7,6 +7,11 @@ import bannerMobileImg from "./bannerMobileImg.png";
 import perpus1 from "./perpus1.jpg";
 import perpus2 from "./perpus2.jpg";
 import perpus3 from "./perpus3.jpg";
+import bookChartImg from "./bookChartImg.png";
+import borrowedBookChartImg from "./borrowedBookChartImg.png";
+import bookCover1Img from "./bookCover1Img.png";
+import bookCover2Img from "./bookCover2Img.png";
+import bookCover3Img from "./bookCover3Img.png";
 
 export {
   bannerImg,
@@ -18,4 +23,9 @@ export {
   perpus1,
   perpus2,
   perpus3,
+  bookChartImg,
+  borrowedBookChartImg,
+  bookCover1Img,
+  bookCover2Img,
+  bookCover3Img,
 };
