@@ -21,6 +21,7 @@ import logPaperIcon from "./logPaperIcon.png";
 import logoutIcon from "./logoutIcon.png";
 import logoutWhiteIcon from "./logoutWhiteIcon.png";
 import closeSidebarIcon from "./closeSidebarIcon.png";
+import editIcon from "./editIcon.png";
 
 export {
   emailIcon,
@@ -46,4 +47,5 @@ export {
   logoutIcon,
   logoutWhiteIcon,
   closeSidebarIcon,
+  editIcon,
 };

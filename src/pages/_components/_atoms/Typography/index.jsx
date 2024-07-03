@@ -15,9 +15,7 @@ const Typography = ({ variant, className, children }) => {
   const variantClass = variantStyles[variant] || "";
 
   return (
-    <Component className={`${variantClass} ${className} `}>
-      {children}
-    </Component>
+    <Component className={`${variantClass} ${className}`}>{children}</Component>
   );
 };
 
